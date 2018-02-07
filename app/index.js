@@ -159,10 +159,6 @@ export default class InfiniteScroll extends Component {
       return; // user's going up, we don't care
     }
 
-    // return immediately if the action has already been triggered,
-    // prevents multiple triggers.
-    if (this.state.actionTriggered) return;
-
     let atBottom = this.isElementAtBottom(target, this.props.scrollThreshold);
 
     // call the `next` function in the props to trigger the next data fetch
